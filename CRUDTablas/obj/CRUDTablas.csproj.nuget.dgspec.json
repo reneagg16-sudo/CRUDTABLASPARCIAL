@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alumno\\source\\repos\\CRUDTablas\\CRUDTablas\\CRUDTablas.csproj": {}
+    "C:\\Users\\ACER\\Source\\Repos\\CRUDTABLASPARCIAL\\CRUDTablas\\CRUDTablas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alumno\\source\\repos\\CRUDTablas\\CRUDTablas\\CRUDTablas.csproj": {
+    "C:\\Users\\ACER\\Source\\Repos\\CRUDTABLASPARCIAL\\CRUDTablas\\CRUDTablas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alumno\\source\\repos\\CRUDTablas\\CRUDTablas\\CRUDTablas.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Source\\Repos\\CRUDTABLASPARCIAL\\CRUDTablas\\CRUDTablas.csproj",
         "projectName": "CRUDTablas",
-        "projectPath": "C:\\Users\\Alumno\\source\\repos\\CRUDTablas\\CRUDTablas\\CRUDTablas.csproj",
-        "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alumno\\source\\repos\\CRUDTablas\\CRUDTablas\\obj\\",
+        "projectPath": "C:\\Users\\ACER\\Source\\Repos\\CRUDTABLASPARCIAL\\CRUDTablas\\CRUDTablas.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Source\\Repos\\CRUDTABLASPARCIAL\\CRUDTablas\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,6 +45,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,7 +70,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.315/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.316/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
