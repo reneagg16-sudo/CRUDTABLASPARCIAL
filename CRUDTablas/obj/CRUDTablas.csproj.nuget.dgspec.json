@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ACER\\Source\\Repos\\CRUDTABLASPARCIAL\\CRUDTablas\\CRUDTablas.csproj": {}
+    "C:\\Users\\renea\\OneDrive\\Desktop\\Nueva carpeta\\CRUDTablas\\CRUDTablas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACER\\Source\\Repos\\CRUDTABLASPARCIAL\\CRUDTablas\\CRUDTablas.csproj": {
+    "C:\\Users\\renea\\OneDrive\\Desktop\\Nueva carpeta\\CRUDTablas\\CRUDTablas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Source\\Repos\\CRUDTABLASPARCIAL\\CRUDTablas\\CRUDTablas.csproj",
+        "projectUniqueName": "C:\\Users\\renea\\OneDrive\\Desktop\\Nueva carpeta\\CRUDTablas\\CRUDTablas.csproj",
         "projectName": "CRUDTablas",
-        "projectPath": "C:\\Users\\ACER\\Source\\Repos\\CRUDTABLASPARCIAL\\CRUDTablas\\CRUDTablas.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Source\\Repos\\CRUDTABLASPARCIAL\\CRUDTablas\\obj\\",
+        "projectPath": "C:\\Users\\renea\\OneDrive\\Desktop\\Nueva carpeta\\CRUDTablas\\CRUDTablas.csproj",
+        "packagesPath": "C:\\Users\\renea\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renea\\OneDrive\\Desktop\\Nueva carpeta\\CRUDTablas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\renea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,7 +70,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.316/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.318/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
