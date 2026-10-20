@@ -3,10 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace CRUDTablas.Models
 {
-    internal class TiendaContext
+    public class TiendaContext : DbContext
     {
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Producto> Productos { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            string dbPath = Path.Combine(baseDir, "TiendaDB.mdf");
+            optionsBuilder.UseSqlServer($"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={dbPath};Integrated Security=True;Connect Timeout=30");
+
+        }
     }
 }
