@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUDTablas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02f577a6c28e9c70a102bc801f6a28a74e96c475")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+498a718e9547bb0c900453800fd06652ae9e0ad6")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUDTablas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUDTablas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

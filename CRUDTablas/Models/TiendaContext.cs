@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using System.IO;
+using static System.Net.WebRequestMethods;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CRUDTablas.Models
 {
@@ -14,10 +17,8 @@ namespace CRUDTablas.Models
         public DbSet<Producto> Productos { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
-            string dbPath = Path.Combine(baseDir, "TiendaDB.mdf");
-            optionsBuilder.UseSqlServer($"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={dbPath};Integrated Security=True;Connect Timeout=30");
-
+            optionsBuilder.UseSqlServer(@"Server=localhost\SQLEXPRESS; Database=TiendaDB;Trusted_Connection=True;
+                TrustServerCertificate=True");
         }
     }
 }

@@ -28,35 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dgvProductos = new DataGridView();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txtNombre = new TextBox();
+            txtPrecio = new TextBox();
+            cmbCategorias = new ComboBox();
+            btnGuardar = new Button();
+            btnActualizar = new Button();
+            btnEliminar = new Button();
+            btnLimpiar = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvProductos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(556, 150);
-            dataGridView1.TabIndex = 0;
+            dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProductos.Location = new Point(14, 16);
+            dgvProductos.Margin = new Padding(3, 4, 3, 4);
+            dgvProductos.Name = "dgvProductos";
+            dgvProductos.RowHeadersWidth = 51;
+            dgvProductos.Size = new Size(635, 200);
+            dgvProductos.TabIndex = 0;
+            dgvProductos.CellClick += dgvProductos_CellClick;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label1.Location = new Point(24, 190);
+            label1.Location = new Point(27, 253);
             label1.Name = "label1";
-            label1.Size = new Size(77, 21);
+            label1.Size = new Size(94, 28);
             label1.TabIndex = 1;
             label1.Text = "Nombre:";
             // 
@@ -64,9 +67,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label2.Location = new Point(39, 222);
+            label2.Location = new Point(45, 296);
             label2.Name = "label2";
-            label2.Size = new Size(62, 21);
+            label2.Size = new Size(76, 28);
             label2.TabIndex = 2;
             label2.Text = "Precio:";
             // 
@@ -74,105 +77,118 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label3.Location = new Point(13, 251);
+            label3.Location = new Point(15, 335);
             label3.Name = "label3";
-            label3.Size = new Size(88, 21);
+            label3.Size = new Size(108, 28);
             label3.TabIndex = 3;
             label3.Text = "Categorìa:";
             // 
-            // textBox1
+            // txtNombre
             // 
-            textBox1.Location = new Point(124, 192);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(270, 23);
-            textBox1.TabIndex = 4;
+            txtNombre.Location = new Point(142, 256);
+            txtNombre.Margin = new Padding(3, 4, 3, 4);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(308, 27);
+            txtNombre.TabIndex = 4;
             // 
-            // textBox2
+            // txtPrecio
             // 
-            textBox2.Location = new Point(124, 224);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(155, 23);
-            textBox2.TabIndex = 5;
+            txtPrecio.Location = new Point(142, 299);
+            txtPrecio.Margin = new Padding(3, 4, 3, 4);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(177, 27);
+            txtPrecio.TabIndex = 5;
             // 
-            // comboBox1
+            // cmbCategorias
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(124, 253);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(204, 23);
-            comboBox1.TabIndex = 6;
+            cmbCategorias.FormattingEnabled = true;
+            cmbCategorias.Location = new Point(142, 337);
+            cmbCategorias.Margin = new Padding(3, 4, 3, 4);
+            cmbCategorias.Name = "cmbCategorias";
+            cmbCategorias.Size = new Size(233, 28);
+            cmbCategorias.TabIndex = 6;
             // 
-            // button1
+            // btnGuardar
             // 
-            button1.Location = new Point(58, 307);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 7;
-            button1.Text = "Guardar";
-            button1.UseVisualStyleBackColor = true;
+            btnGuardar.Location = new Point(66, 409);
+            btnGuardar.Margin = new Padding(3, 4, 3, 4);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(86, 31);
+            btnGuardar.TabIndex = 7;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
-            // button2
+            // btnActualizar
             // 
-            button2.Location = new Point(173, 307);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 8;
-            button2.Text = "Actualizar";
-            button2.UseVisualStyleBackColor = true;
+            btnActualizar.Location = new Point(198, 409);
+            btnActualizar.Margin = new Padding(3, 4, 3, 4);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(86, 31);
+            btnActualizar.TabIndex = 8;
+            btnActualizar.Text = "Actualizar";
+            btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.Click += btnGuardar_Click;
             // 
-            // button3
+            // btnEliminar
             // 
-            button3.Location = new Point(298, 307);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 9;
-            button3.Text = "Eliminar";
-            button3.UseVisualStyleBackColor = true;
+            btnEliminar.Location = new Point(341, 409);
+            btnEliminar.Margin = new Padding(3, 4, 3, 4);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(86, 31);
+            btnEliminar.TabIndex = 9;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
-            // button4
+            // btnLimpiar
             // 
-            button4.Location = new Point(411, 307);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 10;
-            button4.Text = "Limpiar";
-            button4.UseVisualStyleBackColor = true;
+            btnLimpiar.Location = new Point(470, 409);
+            btnLimpiar.Margin = new Padding(3, 4, 3, 4);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(86, 31);
+            btnLimpiar.TabIndex = 10;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // ftmProductos
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(593, 345);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            ClientSize = new Size(678, 460);
+            Controls.Add(btnLimpiar);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnActualizar);
+            Controls.Add(btnGuardar);
+            Controls.Add(cmbCategorias);
+            Controls.Add(txtPrecio);
+            Controls.Add(txtNombre);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvProductos);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ftmProductos";
             Text = "Registro de Productos";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += ftmProductos_Load_1;
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvProductos;
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private ComboBox comboBox1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private TextBox txtNombre;
+        private TextBox txtPrecio;
+        private ComboBox cmbCategorias;
+        private Button btnGuardar;
+        private Button btnActualizar;
+        private Button btnEliminar;
+        private Button btnLimpiar;
     }
 }
